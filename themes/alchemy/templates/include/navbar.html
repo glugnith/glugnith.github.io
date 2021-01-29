@@ -1,0 +1,33 @@
+<div class="global-nav" role="complementary">
+    <div class="container">
+        <a href="{{ NAVURL }}" style="color: white; text-decoration: none;">{{ NAVTEXT }}</a>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #333;">
+    <div class="container">
+        <div class="navbar-brand"><a href="{{ SITEURL }}"><img src={{ url(BANNER) }}
+                style="position: relative; top: -3px;"></a></div>
+
+        <div class="navbar-collapse collapse " id="navbarColor01">
+            {% if LINKS or pages %}
+            <ul class="navbar-nav">
+                {% if DISPLAY_PAGES_ON_MENU %}
+                {% for page in pages %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}
+                    </a>
+                </li>
+                {% endfor %}
+                {% endif %}
+                {% for title, link in LINKS %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url(link) }}">{{ title }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</nav>
