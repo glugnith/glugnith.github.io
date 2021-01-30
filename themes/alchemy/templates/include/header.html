@@ -1,49 +1,33 @@
-{%- macro fa(icon) -%}
-{%- set fa_special_icons = {
-  "feed": "fas fa-rss",
-  "rss": "fas fa-rss",
-} -%}
-{%- if icon in fa_special_icons -%}
-{{ fa_special_icons[icon] }}
-{%- elif icon.split()|select("in", ["fab", "fas", "far", "fal", "fad"])|list -%}
-{{ icon }}
-{%- else -%}
-fab fa-{{icon}}
-{%- endif -%}
-{%- endmacro -%}
-<div class="row">
-  {% if SITEIMAGE %}
-    <div class="col-sm-4">
-      <a href="{{ SITEURL }}/">
-        <img class="img-fluid rounded" src={{ url(SITEIMAGE) }} alt="{{ SITENAME }}">
+<div class="p-navigation__row u-fixed-width">
+  <div class="p-navigation__banner">
+    <div class="p-navigation__logo">
+      <a class="p-navigation__link" href="{{ SITEURL }}">
+        <img src={{ url(SITEBANNER) }} alt="{{ SITENAME }}">
       </a>
     </div>
-  {% endif %}
-  <div class="col-sm-{% if SITEIMAGE %}8{% else %}12{% endif %}">
-    <h1 class="title"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-    {% if SITESUBTITLE %}
-      <p class="text-muted">{{ SITESUBTITLE }}</p>
-    {% endif %}
-    {% if LINKS or (DISPLAY_PAGES_ON_MENU and pages) or ICONS %}
-      <ul class="list-inline">
-        {% for title, link in LINKS %}
-          <li class="list-inline-item"><a href="{{ url(link) }}" target="_blank">{{ title }}</a></li>
-        {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU %}
-          {% for page in pages %}
-            {% if LINKS and loop.first %}
-              <li class="list-inline-item text-muted">|</li>
-            {% endif %}
-            <li class="list-inline-item"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-          {% endfor %}
-        {% endif %}
-        {% for icon, link in ICONS %}
-          {% if (LINKS or (DISPLAY_PAGES_ON_MENU and pages)) and loop.first %}
-            <li class=" list-inline-item text-muted">|</li>
-          {% endif %}
-          <li class="list-inline-item"><a class="{{ fa(icon) }}" href="{{ url(link) }}" target="_blank"></a></li>
-        {% endfor %}
-      </ul>
-    {% endif %}
   </div>
+
+  <nav class="p-navigation__nav">
+    {% if LINKS or (DISPLAY_PAGES_ON_MENU and pages) %}
+    <ul class="p-navigation__links">
+      {% if DISPLAY_PAGES_ON_MENU %}
+      {% for page in pages %}
+      <li class="p-navigation__dropdown-link--noscript"><a class="p-navigation__link-anchor"
+          href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+      {% endfor %}
+      {% endif %}
+      {% for title, link in LINKS %}
+      <li class="p-navigation__dropdown-link--noscript"><a class="p-navigation__link-anchor" href="{{ url(link) }}">{{
+          title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <div class="p-navigation__search">
+      <form action="/search" class="p-search-box" id="google-appliance-search-form">
+        <input type="search" class="p-search-box__input" name="q" placeholder="Search" required="" aria-label="Search">
+        <button type="reset" class="p-search-box__reset u-no-margin--right"><i class="p-icon--close">Clear</i></button>
+        <button type="submit" class="p-search-box__button"><i class="p-icon--search">Search</i></button>
+      </form>
+    </div>
+  </nav>
 </div>
