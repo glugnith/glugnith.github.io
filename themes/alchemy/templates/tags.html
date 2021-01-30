@@ -6,7 +6,7 @@ Tags {{ super() }}
 
 {% block banner_header %}
 <section class=" p-takeover--grad">
-  <div class="row is-loaded">
+  <div class="row_u is-loaded">
     <h1 id="takeover-title"><i class="fa fa-tag"></i> Tags</h1>
   </div>
 </section>
@@ -16,7 +16,7 @@ Tags {{ super() }}
 <table class="table table-bordered table-striped">
   {% for tag, articles in tags|sort %}
   <tr>
-    <td><a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a></td>
+    <td><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></td>
     <td>{{ articles|count }}</td>
   </tr>
   {% endfor %}
