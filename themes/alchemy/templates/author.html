@@ -4,6 +4,10 @@
   {{ author }} Articles | {{ SITENAME }}
 {% endblock %}
 
-{% block page_header %}
-  {{ author }} Articles
+{% block banner_header %}
+<section class=" p-takeover--grad">
+  <div class="row_u is-loaded">
+      <h1 id="takeover-title"><i class="fa fa-user"></i> Author: {{ author }}</h1>
+  </div>
+</section>
 {% endblock %}
