@@ -4,11 +4,11 @@
 AUTHOR = 'GLUG-NITH'
 SITENAME = 'GNU/Linux Users Group'
 SITESUBTITLE = 'Open Source Community of NITH'
-SITEURL = ''
+SITEURL = 'https://glugnith.github.io'
 SITEIMAGE = 'images/glug-logo.png width=150px height=150px'
-BANNER = 'images/glug-banner.png height=25px'
+SITEBANNER = 'images/glug.svg width=70px'
 NAVURL = 'https://nith.ac.in'
-NAVTEXT = "National Institute of Technology, Hamirpur"
+NAVTEXT = "NIT Hamirpur"
 THEME = 'themes/alchemy'
 PATH = 'content'
 TIMEZONE = 'Asia/Kolkata'
@@ -32,6 +32,8 @@ PAGE_SAVE_AS = PAGE_URL
 ICONS = [
     ('github', "https://github.com/glugnith"),
     ('instagram', 'https://www.instagram.com/glugnith')
+    ('linkedin', 'https://www.linkedin.com'),
+    ('facebook', "https://www.facebook.com")
 ]
 
 # links
