@@ -31,7 +31,7 @@ PAGE_SAVE_AS = PAGE_URL
 # icons
 ICONS = [
     ('github', "https://github.com/glugnith"),
-    ('instagram', 'https://www.instagram.com/glugnith')
+    ('instagram', 'https://www.instagram.com/glugnith'),
     ('linkedin', 'https://www.linkedin.com'),
     ('facebook', "https://www.facebook.com")
 ]
