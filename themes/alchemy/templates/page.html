@@ -9,8 +9,12 @@
   {{ page.title|striptags }} {{ super() }}
 {% endblock %}
 
-{% block page_header %}
-  {{ page.title }}
+{% block banner_header %}
+<section class=" p-takeover--grad">
+  <div class="row_u is-loaded">
+      <h1 id="takeover-title">{{ page.title }}</h1>
+  </div>
+</section>
 {% endblock %}
 
 {% block content %}
