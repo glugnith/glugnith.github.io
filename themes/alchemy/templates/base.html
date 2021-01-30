@@ -30,6 +30,9 @@
   <link rel="stylesheet" href="{{ url(FONTAWESOME_CSS or '/theme/css/fontawesome.min.css') }}">
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments/{{ PYGMENTS_STYLE|default('default') }}.min.css">
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/theme.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/ubuntu.min.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/navbar.css">
+
   {% for stylesheet in THEME_CSS_OVERRIDES or () %}
   <link rel="stylesheet" href="{{ url(stylesheet) }}">
   {% endfor %}
@@ -40,25 +43,26 @@
 </head>
 
 <body>
-  
+
   {% include 'include/navbar.html' %}
 
-  <header class="header">
-    <div class="container">
-      {% include 'include/header.html' %}
-    </div>
+  <header class="p-navigation">
+    {% include 'include/header.html' %}
   </header>
+
+  {% block banner_header %}{% endblock %}
 
   <div class="main">
     <div class="container">
-      <h1>{% block page_header %}{% endblock %}</h1>
-      <hr>
       {% block content %}{% endblock %}
     </div>
   </div>
 
-  <footer class="footer">
+  <footer class="footer p-takeover--gradfoot">
     <div class="container">
+      <br>
+      <br>
+      <br>
       {% include 'include/footer.html' %}
     </div>
   </footer>
