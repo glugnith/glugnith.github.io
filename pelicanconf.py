@@ -32,14 +32,14 @@ PAGE_SAVE_AS = PAGE_URL
 ICONS = [
     ('github', "https://github.com/glugnith"),
     ('instagram', 'https://www.instagram.com/glugnith'),
-    ('linkedin', 'https://www.linkedin.com'),
-    ('facebook', "https://www.facebook.com")
+    ('linkedin', 'https://www.linkedin.com/groups/6683789/'),
+    ('facebook', 'https://www.facebook.com/glug.nith')
 ]
 
 # links
 LINKS = [
-    ('NITH', "https://nith.ac.in"),
+    ('Report a Bug', "https://github.com/glugnith/glugnith.github.io/issues/new"),
+    ('Post', "https://github.com/glugnith/glugnith.github.io/new/main/content/posts")
 ]
-
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 PYGMENTS_STYLE = 'monokai'
