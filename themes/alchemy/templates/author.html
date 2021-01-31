@@ -1,13 +1,14 @@
 {% extends "index.html" %}
 
 {% block title %}
-  {{ author }} Articles | {{ SITENAME }}
+{{ author }} Articles | {{ SITENAME }}
 {% endblock %}
 
 {% block banner_header %}
 <section class=" p-takeover--grad">
   <div class="row_u main container is-loaded">
-      <h1 id="takeover-title"><i class="fa fa-user"></i> Author: {{ author }}</h1>
+    <h1 id="takeover-title"><a href="https://github.com/{{ author }}" style="color: white;"><i
+          class="fab fa-github"></i></a> Author: {{ author }}</h1>
   </div>
 </section>
 {% endblock %}
