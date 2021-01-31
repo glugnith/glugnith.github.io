@@ -38,8 +38,7 @@ ICONS = [
 
 # links
 LINKS = [
-    ('Report a Bug', "https://github.com/glugnith/glugnith.github.io/issues/new"),
-    ('Post', "https://github.com/glugnith/glugnith.github.io/new/main/content/posts")
+    ('Report a Bug', "https://github.com/glugnith/glugnith.github.io/issues/new")
 ]
 DEFAULT_PAGINATION = 5
 PYGMENTS_STYLE = 'monokai'
