@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>GNU/Linux Users Group</title><link href="https://glugnith.github.io/" rel="alternate"></link><link href="https://glugnith.github.io/feeds/all.atom.xml" rel="self"></link><id>https://glugnith.github.io/</id><updated>2021-01-31T17:47:00+05:30</updated><subtitle>Open Source Community of NITH</subtitle><entry><title>Welcome to the Blog of GLUG NITH</title><link href="https://glugnith.github.io/posts/glug/glug-welcome.html" rel="alternate"></link><published>2021-01-31T17:47:00+05:30</published><updated>2021-01-31T17:47:00+05:30</updated><author><name>glugnith</name></author><id>tag:glugnith.github.io,2021-01-31:/posts/glug/glug-welcome.html</id><summary type="html">&lt;p&gt;This blog uses Pelican Static Site Generator and &lt;code&gt;reStruxturedText&lt;/code&gt;. ReStructuredText is a lightweight and powerful markup language very similar to &lt;code&gt;markdown&lt;/code&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog uses Pelican Static Site Generator and &lt;code&gt;reStruxturedText&lt;/code&gt;. ReStructuredText is a lightweight and powerful markup language very similar to &lt;code&gt;markdown&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Directory Structure&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    .
+    &lt;span class="p"&gt;|&lt;/span&gt;_.github       &lt;span class="c1"&gt;# Workflow Files&lt;/span&gt;
+    &lt;span class="p"&gt;|&lt;/span&gt;_content
+    &lt;span class="p"&gt;|&lt;/span&gt;   &lt;span class="p"&gt;|&lt;/span&gt;_extras    &lt;span class="c1"&gt;# static files&lt;/span&gt;
+    &lt;span class="p"&gt;|&lt;/span&gt;   &lt;span class="p"&gt;|&lt;/span&gt;_images    &lt;span class="c1"&gt;# images for posts and website&lt;/span&gt;
+    &lt;span class="p"&gt;|&lt;/span&gt;   &lt;span class="p"&gt;|&lt;/span&gt;_pages     &lt;span class="c1"&gt;# static pages&lt;/span&gt;
+    &lt;span class="p"&gt;|&lt;/span&gt;   &lt;span class="p"&gt;|&lt;/span&gt;_posts     &lt;span class="c1"&gt;# post files (add your post here)&lt;/span&gt;
+    &lt;span class="p"&gt;|&lt;/span&gt;_themes/alchemy
+        &lt;span class="p"&gt;|&lt;/span&gt;_static     &lt;span class="c1"&gt;# CSS and font files&lt;/span&gt;
+        &lt;span class="p"&gt;|&lt;/span&gt;_templates  &lt;span class="c1"&gt;# templates for generating webpages&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Contribution Guidelines&lt;/h2&gt;
+&lt;h3&gt;Adding a new Post&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fork this repository and clone to your system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    git clone https://github.com/&amp;lt;username&amp;gt;/glugnith.github.io.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Go to &lt;code&gt;content/posts&lt;/code&gt; folder and choose a category to start with. We currently have 4 categories. Feel free to &lt;a href="https://github.com/glugnith/glugnith.github.io/issues"&gt;open an issue&lt;/a&gt; to recommend new category. &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Category&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;development&lt;/td&gt;
+&lt;td&gt;web/app/desktop development articles&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;programming&lt;/td&gt;
+&lt;td&gt;programming language tips &amp;amp; tricks, competitive programming articles&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tools&lt;/td&gt;
+&lt;td&gt;IDE, editors, other open source development tools articles&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;experience&lt;/td&gt;
+&lt;td&gt;interview, internship, placement experience articles&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="nb"&gt;cd&lt;/span&gt; glugnith.github.io/content/posts
+    &lt;span class="c1"&gt;# let us choose development category&lt;/span&gt;
+    &lt;span class="nb"&gt;cd&lt;/span&gt; development
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add a new &lt;code&gt;reStructuredText&lt;/code&gt; or &lt;code&gt;markdown&lt;/code&gt; file. Check for exisiting file names.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="c1"&gt;# reStructuredText&lt;/span&gt;
+    nano mypost.rst
+    &lt;span class="c1"&gt;# Makrdown&lt;/span&gt;
+    nano mypost.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Your file must contain these components in the following format. Put all images in &lt;code&gt;images&lt;/code&gt; directory only.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reStructuredText&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="gs"&gt;*******************************************************&lt;/span&gt;
+    Your Post Title Surrounded by Asterisks Above and Below
+    &lt;span class="gs"&gt;*******************************************************&lt;/span&gt;
+
+    &lt;span class="nc"&gt;:date:&lt;/span&gt; YYYY-MM-DD HH:mm
+    &lt;span class="nc"&gt;:modified:&lt;/span&gt; YYYY-MM-DD HH:mm (only if existing article is being modified)
+    &lt;span class="nc"&gt;:tags:&lt;/span&gt; add, some, tags, here, seperated, by, commas
+    &lt;span class="nc"&gt;:slug:&lt;/span&gt; yourfilename-YYYYMMDD
+    &lt;span class="nc"&gt;:category:&lt;/span&gt; category-selected-in-previous-steps
+    &lt;span class="nc"&gt;:author:&lt;/span&gt; github-username
+
+    &amp;lt;write your post here&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Markdown&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    Title: Your Post Title 
+    Date: YYYY-MM-DD HH:mm
+    Modified: YYYY-MM-DD HH:mm (only if existing article is being modified)
+    Tags: add, some, tags, here, seperated, by, commas
+    Slug: yourfilename-YYYYMMDD
+    Category: category-selected-in-previous-steps
+    Author: github-username
+
+    &amp;lt;write your post here&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Save and push to GitHub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    git stage -A
+    git commit -m &lt;span class="s2"&gt;&amp;quot;commit message&amp;quot;&lt;/span&gt;
+    git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fork this repository and clone to your system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    git clone https://github.com/&amp;lt;username&amp;gt;/glugnith.github.io.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This blog is based on &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; SSG. Install required components.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="nb"&gt;cd&lt;/span&gt; glugnith.github.io
+    sudo pip install -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Do your changes and test locally (comment &lt;code&gt;SITEURL&lt;/code&gt; in &lt;code&gt;pelicanconf.py&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    make html &lt;span class="c1"&gt;# generate html files&lt;/span&gt;
+    make serve &lt;span class="c1"&gt;# serve on local host&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Push and add a Pull Request (do not forget to un-comment &lt;code&gt;SITEURL&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/latest/index.html"&gt;Pelican Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html"&gt;reStructuredText reference&lt;/a&gt; - Most of them will work with pelican&lt;/li&gt;
+&lt;/ul&gt;</content><category term="glug"></category><category term="glug"></category><category term="nith"></category><category term="welcome"></category></entry></feed>
