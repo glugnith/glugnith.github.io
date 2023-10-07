@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block title %}
+  {{ tag }} Articles | {{ SITENAME }}
+{% endblock %}
+
+
+{% block banner_header %}
+<section class=" p-takeover--grad">
+  <div class="row_u main container is-loaded">
+      <h1 id="takeover-title"><i class="fa fa-tag"></i>Tag: {{ tag }}</h1>
+  </div>
+</section>
+{% endblock %}

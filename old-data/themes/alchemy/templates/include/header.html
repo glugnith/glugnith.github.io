@@ -1,0 +1,26 @@
+<div class="p-navigation__row u-fixed-width container">
+  <div class="p-navigation__banner">
+    <div class="p-navigation__logo">
+      <a class="p-navigation__link" href="{{ SITEURL }}">
+        <img src={{ url(SITEBANNER) }} alt="{{ SITENAME }}">
+      </a>
+    </div>
+  </div>
+
+  <nav class="p-navigation__nav">
+    {% if LINKS or (DISPLAY_PAGES_ON_MENU and pages) %}
+    <ul class="p-navigation__links">
+      {% if DISPLAY_PAGES_ON_MENU %}
+      {% for page in pages %}
+      <li class="p-navigation__dropdown-link--noscript"><a class="p-navigation__link-anchor"
+          href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+      {% endfor %}
+      {% endif %}
+      {% for title, link in LINKS %}
+      <li class="p-navigation__dropdown-link--noscript"><a class="p-navigation__link-anchor" href="{{ url(link) }}">{{
+          title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </nav>
+</div>

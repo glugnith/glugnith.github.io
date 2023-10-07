@@ -1,0 +1,34 @@
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+/* Define icon-specific styles */
+.instagram {
+    color: #bc2a8d;
+}
+
+.discord {
+    color: #7289da;
+}
+
+.github {
+    color: #333;
+}
+
+.linkedin {
+    color: #0077b5;
+}
+
+.email {
+    color: #ea4335;
+}
+
+/* Add hover effect */
+.social-link:hover {
+    color: #555;
+}

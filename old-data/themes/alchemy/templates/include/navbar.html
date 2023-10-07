@@ -1,0 +1,33 @@
+{%- macro fa(icon) -%}
+{%- set fa_special_icons = {
+"feed": "fas fa-rss",
+"rss": "fas fa-rss",
+} -%}
+{%- if icon in fa_special_icons -%}
+{{ fa_special_icons[icon] }}
+{%- elif icon.split()|select("in", ["fab", "fas", "far", "fal", "fad"])|list -%}
+{{ icon }}
+{%- else -%}
+fab fa-{{icon}}
+{%- endif -%}
+{%- endmacro -%}
+<div class="global-nav" role="complementary">
+    <div class="global-nav__header">
+        <div class="global-nav__header-row global-nav__row" style="max-width:68rem">
+            <div class="global-nav__header-logo">
+                <a class="global-nav__header-logo-anchor" href="{{ NAVURL }}"
+                    style="color: white; text-decoration: none; font-weight: 500;">{{ NAVTEXT }}</a>
+            </div>
+            {% if ICONS %}
+            <ul class="global-nav__header-list">
+                {% for icon, link in ICONS %}
+                <li class="global-nav__header-link">
+                    <a class="global-nav__header-link-anchor {{ fa(icon) }}" href="{{ url(link) }}"></a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+    <div class="global-nav__overlay"></div>
+</div>

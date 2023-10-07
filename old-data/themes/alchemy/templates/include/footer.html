@@ -1,0 +1,22 @@
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    {% if not HIDE_AUTHORS %}
+    <li class="list-inline-item"><a href="{{ SITEURL }}/{{ AUTHORS_URL or AUTHORS_SAVE_AS or 'authors.html' }}"
+        style="color: white;">Authors</a></li>
+    {% endif %}
+    <li class="list-inline-item"><a href="{{ SITEURL }}/{{ ARCHIVES_URL or ARCHIVES_SAVE_AS or 'archives.html' }}"
+        style="color: white;">Archives</a></li>
+    <li class="list-inline-item"><a href="{{ SITEURL }}/{{ CATEGORIES_URL or CATEGORIES_SAVE_AS or 'categories.html' }}"
+        style="color: white;">Categories</a></li>
+    {% if tags|length %}
+    <li class="list-inline-item"><a href="{{ SITEURL }}/{{ TAGS_URL or TAGS_SAVE_AS or 'tags.html' }}"
+        style="color: white;">Tags</a></li>
+    {% for title, link in FOOTER_LINKS %}
+    <li class="list-inline-item"><a href="{{ url(link) }}">{{ title }}</a></li>
+    {% endfor %}
+    {% endif %}
+  </ul>
+  <p class="col-sm-6 text-sm-right" style="position: relative; top: -5px;"><i class="fa fa-code"></i> with <i
+      class="fa fa-heart" style="color: red;"></i> by <a href="https://github.com/glugnith"><img src={{ url(SITEBANNER) }} style="position: relative; top: -2px;"></a>
+  </p>
+</div>
