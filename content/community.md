@@ -1,8 +1,10 @@
 ---
 title: Community
-image: "/uploads/portfolio-2.webp"
+image: "/wallpaper.jpg"
 description: My blog's description here
-
+disableShare: true
+ShowReadingTime: false
+searchHidden: true
 ---
 
 **GNU/Linux Users Group** is the open-source community of the National Institute of Technology, Hamirpur, India. GLUG is powered by a large number of open source and Linux enthusiasts. We share a common love for GNU/Linux and FOSS.  

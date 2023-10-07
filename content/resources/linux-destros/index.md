@@ -3,6 +3,13 @@ author: "Swastik Sharma"
 title: "Linux Destros"
 date: "2023-10-05"
 description: "Download links for different linux destros!"
+tags: ["math","markdown", "css", "html", "themes"]
+categories: ["themes", "syntax"]
+ShowBreadCrumbs: false
+ShowToc: true
+TocOpen: true
+
+
 
 ---
 

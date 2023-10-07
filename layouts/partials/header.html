@@ -1,9 +1,9 @@
 <!-- Nav -->
 <nav class="desktop">
   <ul>
-    {{- $label_text := (.Site.Params.label.text | default .Site.Title) }}
+    <!-- {{- $label_text := (.Site.Params.label.text | default .Site.Title) }} -->
     <li>
-      <a class="logo" href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + h)">
+      <a class="logo" href="{{ "" | absLangURL }}" accesskey="h" title="Home">
         <img
           id="lightMainIcon"
           src="{{.Site.Params.label.lightNavIcon | relURL}}"

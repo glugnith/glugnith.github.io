@@ -11,9 +11,9 @@ url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
     <div>
       <a
         class="hero-buttons"
-        href="{{ .Site.Params.homepage.heroCTAPrimaryUrl | relURL  }}"
+        href="{{ .Site.Params.homepage.heroCTATertiaryUrl | relURL  }}"
         role="button"
-        >{{.Site.Params.homepage.heroCTAPrimaryText}}</a
+        >{{.Site.Params.homepage.heroCTATertiaryText}}</a
       >
       <a
         href="{{ .Site.Params.homepage.heroCTASecondaryUrl | relURL  }}"
@@ -21,18 +21,18 @@ url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
         class="contrast outline"
         >{{.Site.Params.homepage.heroCTASecondaryText}}</a
       >
-      <a
+      <!-- <a
         href="{{ .Site.Params.homepage.heroCTATertiaryUrl | relURL  }}"
         role="button"
         class="contrast outline"
         >{{.Site.Params.homepage.heroCTATertiaryText}}</a
-      >
+      > -->
     </div>
   </header>
 </section>
 {{ end }}
 
-
+<!-- 
 {{- if not (.Site.Params.homepage.disableBlogSection) }}
 <section>
   <hgroup class="text-center">
@@ -73,9 +73,9 @@ url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
   <a href="{{ "/blog" | absLangURL }}"><kbd>{{.Site.Params.homepage.seeMoreText}}</kbd></a>
 </div>
 </section>
-{{ end }}
+{{ end }} -->
 
-{{- if not (.Site.Params.homepage.disableAboutSection) }}
+<!-- {{- if not (.Site.Params.homepage.disableAboutSection) }}
 <section>
   <hgroup class="text-center">
     <h2>{{.Site.Params.homepage.aboutTitle}}</h2>
@@ -98,7 +98,7 @@ url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
     </div>
   </div>
 </section>
-{{ end }}
+{{ end }} -->
 
 {{- if not (.Site.Params.homepage.disablePortfolioSection) }}
 <section>

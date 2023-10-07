@@ -43,10 +43,10 @@ params:
   images:
   - "/uploads/og.webp"
   label:
-    title: GLUG-NITH
-    text: Welcome to GLUG-Website
-    lightNavIcon: /uploads/sun.svg
-    darkNavIcon: /uploads/zap.svg
+    title: 
+    text: 
+    lightNavIcon: assets/sun.svg
+    darkNavIcon: assets/zap.svg
     iconHeight: "35"
     iconWIdth: "35"
   comments: true
@@ -60,7 +60,7 @@ params:
   CookieLink: /legal/privacy/#cookies-and-web-beacons
   CookieButton: Cookies Policy
   disableAnchoredHeadings: false
-  contactFormAction: # Get link from https://formsubmit.io or https://fabform.io
+  contactFormAction: https://fabform.io/f/6N86yBt 
   assets:
     disableFingerprinting: false
     favicon: /uploads/zap.svg
@@ -82,7 +82,7 @@ params:
     heroCTASecondaryUrl: "/contact/"
     heroCTATertiaryText: Resources
     heroCTATertiaryUrl: "/resources/"
-    heroBackgroundImage: "/uploads/portfolio-1.webp"
+    heroBackgroundImage: "/wallpaper.jpg"
     # Blog Section
     disableBlogSection: false
     blogTitle: Latest Posts
@@ -111,6 +111,10 @@ params:
       alt: # image alt for better SEO
       description: Portfolio Three.
       websiteUrl: #
+    
+    resources:
+      resourceImgUrl: "/resources.jpg"
+
   # Search Options (https://fusejs.io/)
   fuseOpts:
     isCaseSensitive: false
@@ -168,3 +172,5 @@ menus:
     title: Tags
     url: "/tags"
     weight: "30"
+
+
