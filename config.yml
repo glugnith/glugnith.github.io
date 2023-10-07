@@ -11,6 +11,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 enableEmoji: true
+custom_css: "css/main.css"
 outputs:
   home:
   - HTML
@@ -45,8 +46,8 @@ params:
   label:
     title: 
     text: 
-    lightNavIcon: assets/sun.svg
-    darkNavIcon: assets/zap.svg
+    lightNavIcon: glug.png
+    darkNavIcon: glug.png
     iconHeight: "35"
     iconWIdth: "35"
   comments: true

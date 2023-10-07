@@ -29,6 +29,14 @@ url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
       > -->
     </div>
   </header>
+  <div class="social-links">
+    <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="social-link discord"><i class="fab fa-discord"></i></a>
+    <a href="#" class="social-link github"><i class="fab fa-github"></i></a>
+    <a href="#" class="social-link linkedin"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:your@email.com" class="social-link email"><i class="fas fa-envelope"></i></a>
+  </div>
+  
 </section>
 {{ end }}
 
@@ -99,6 +107,7 @@ url('{{.Site.Params.homepage.heroBackgroundImage}}'); ">
   </div>
 </section>
 {{ end }} -->
+
 
 {{- if not (.Site.Params.homepage.disablePortfolioSection) }}
 <section>
